@@ -165,7 +165,7 @@ class Grep
         }
 
         // Run shell command
-        $command = "grep -n {$recursiveArg} {$excludeArgs} {$includeArgs} ".escapeshellarg($pattern)." ./sailfishIRC-localArchiver/archive/* | sort";
+        $command = "grep -n -i {$recursiveArg} {$excludeArgs} {$includeArgs} ".escapeshellarg($pattern)." ./sailfishIRC-localArchiver/archive/* | sort";
         //echo $command;
         $result = shell_exec($command);
 
